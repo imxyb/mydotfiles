@@ -32,16 +32,16 @@ nnoremap <Leader>Q  :qa!<CR>
 
 " Move half page faster
 nnoremap <Leader>d  <C-d>
-nnoremap <Leader>u  <C-u>
+nnoremap <Leader>e  <C-u>
 
 " Insert mode shortcut
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
-inoremap <C-d> <Delete>
+"inoremap <Leader>h <Left>
+"inoremap <Leader>j <Down>
+"inoremap <Leader>k <Up>
+"inoremap <Leader>l <Right>
+"inoremap <Leader>a <Home>
+"inoremap <Leader>e <End>
+"inoremap <Leader>d <Delete>
 
 " Quit insert mode
 inoremap jj <Esc>
@@ -131,5 +131,12 @@ nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
 nmap <Leader>ff :action AceAction<CR> 
-nmap <Leader>al :action AceLineAction<CR> 
+nmap <Leader><Leader> :action AceLineAction<CR> 
 nmap <Leader>at :action AceTargetAction<CR>
+
+nmap <Leader>ed :action ShowErrorDescription<CR>
+nmap <Leader>en :action GotoNextError<CR>
+nmap <Leader>ep :action GotoPreviousError<CR>
+
+nmap <Leader>im :action GoImportsFileAction<CR>
+
