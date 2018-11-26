@@ -7,7 +7,7 @@ set smartcase
 set showmode
 set number
 set relativenumber
-set scrolloff=3
+set scrolloff=999
 set history=100000
 set clipboard=unnamed
 
@@ -44,9 +44,9 @@ nnoremap <Leader>e  <C-u>
 "inoremap <Leader>d <Delete>
 
 " Quit insert mode
-inoremap jj <Esc>
-inoremap jk <Esc>
-inoremap kk <Esc>
+inoremap <C-i> <Esc>
+#inoremap jk <Esc>
+#inoremap kk <Esc>
 
 " Quit visual mode
 vnoremap v <Esc>
@@ -130,9 +130,9 @@ nnoremap <Leader>tc :action CloseActiveTab<CR>
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-nmap <Leader>ff :action AceAction<CR> 
-nmap <Leader><Leader> :action AceLineAction<CR> 
-nmap <Leader>at :action AceTargetAction<CR>
+#nnoremap f :action AceAction<CR> 
+#nnoremap <Leader><Leader> :action AceLineAction<CR> 
+#nnoremap <Leader>at :action AceTargetAction<CR>
 
 nmap <Leader>ed :action ShowErrorDescription<CR>
 nmap <Leader>en :action GotoNextError<CR>
@@ -140,3 +140,6 @@ nmap <Leader>ep :action GotoPreviousError<CR>
 
 nmap <Leader>im :action GoImportsFileAction<CR>
 
+nmap <leader><leader>s :action KJumpAction<cr>
+nmap <leader><leader>f :action KJumpAction.Word0<cr>
+nmap <leader><leader>l :action KJumpAction.Line<cr>
