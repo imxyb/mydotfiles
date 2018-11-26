@@ -44,9 +44,9 @@ nnoremap <Leader>e  <C-u>
 "inoremap <Leader>d <Delete>
 
 " Quit insert mode
-inoremap jj <Esc>
-inoremap jk <Esc>
-inoremap kk <Esc>
+*inoremap jj <Esc>
+*inoremap jk <Esc>
+*inoremap kk <Esc>
 
 " Quit visual mode
 vnoremap v <Esc>
@@ -130,9 +130,9 @@ nnoremap <Leader>tc :action CloseActiveTab<CR>
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-nmap <Leader>ff :action AceAction<CR> 
-nmap <Leader><Leader> :action AceLineAction<CR> 
-nmap <Leader>at :action AceTargetAction<CR>
+nmap f :action emacsIDEAs.AceJumpWord<CR> 
+#nmap <Leader><Leader> :action AceLineAction<CR> 
+#nmap <Leader>at :action AceTargetAction<CR>
 
 nmap <Leader>ed :action ShowErrorDescription<CR>
 nmap <Leader>en :action GotoNextError<CR>
