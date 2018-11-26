@@ -32,7 +32,7 @@ nnoremap <Leader>Q  :qa!<CR>
 
 " Move half page faster
 nnoremap <Leader>d  <C-d>
-nnoremap <Leader>e  <C-u>
+nnoremap <Leader>u  <C-u>
 
 " Insert mode shortcut
 "inoremap <Leader>h <Left>
@@ -44,11 +44,6 @@ nnoremap <Leader>e  <C-u>
 "inoremap <Leader>d <Delete>
 
 " Quit insert mode
-inoremap <C-i> <Esc>
-#inoremap jk <Esc>
-#inoremap kk <Esc>
-
-" Quit visual mode
 vnoremap v <Esc>
 
 " Move to the start of line
@@ -130,9 +125,9 @@ nnoremap <Leader>tc :action CloseActiveTab<CR>
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-#nnoremap f :action AceAction<CR> 
-#nnoremap <Leader><Leader> :action AceLineAction<CR> 
-#nnoremap <Leader>at :action AceTargetAction<CR>
+nmap f :action emacsIDEAs.AceJumpWord<CR> 
+#nmap <Leader><Leader> :action AceLineAction<CR> 
+#nmap <Leader>at :action AceTargetAction<CR>
 
 nmap <Leader>ed :action ShowErrorDescription<CR>
 nmap <Leader>en :action GotoNextError<CR>
@@ -140,6 +135,5 @@ nmap <Leader>ep :action GotoPreviousError<CR>
 
 nmap <Leader>im :action GoImportsFileAction<CR>
 
-nmap <leader><leader>s :action KJumpAction<cr>
-nmap <leader><leader>f :action KJumpAction.Word0<cr>
-nmap <leader><leader>l :action KJumpAction.Line<cr>
+nmap <Leader>rn :action RenameElement<CR>
+nmap <Leader>ce :action RecentFiles<CR>
