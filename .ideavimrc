@@ -56,7 +56,6 @@ nnoremap H ^
 
 " Move to the end of line
 nnoremap L $
-
 " Redo
 nnoremap U <C-r>
 
@@ -140,3 +139,7 @@ nmap <Leader>ep :action GotoPreviousError<CR>
 
 nmap <Leader>im :action GoImportsFileAction<CR>
 
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
