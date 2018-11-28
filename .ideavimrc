@@ -7,7 +7,7 @@ set smartcase
 set showmode
 set number
 set relativenumber
-set scrolloff=3
+set scrolloff=999
 set history=100000
 set clipboard=unnamed
 
@@ -32,7 +32,7 @@ nnoremap <Leader>Q  :qa!<CR>
 
 " Move half page faster
 nnoremap <Leader>d  <C-d>
-nnoremap <Leader>e  <C-u>
+nnoremap <Leader>u  <C-u>
 
 " Insert mode shortcut
 "inoremap <Leader>h <Left>
@@ -44,11 +44,6 @@ nnoremap <Leader>e  <C-u>
 "inoremap <Leader>d <Delete>
 
 " Quit insert mode
-*inoremap jj <Esc>
-*inoremap jk <Esc>
-*inoremap kk <Esc>
-
-" Quit visual mode
 vnoremap v <Esc>
 
 " Move to the start of line
@@ -143,3 +138,5 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+nmap <Leader>rn :action RenameElement<CR>
+nmap <Leader>ce :action RecentFiles<CR>
