@@ -10,6 +10,8 @@ set relativenumber
 set scrolloff=999
 set history=100000
 set clipboard=unnamed
+set surround
+set multiple-cursors
 
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
@@ -140,3 +142,5 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 nmap <Leader>rn :action RenameElement<CR>
 nmap <Leader>ce :action RecentFiles<CR>
+nnoremap mm :action ToggleBookmark0<CR>
+nnoremap `m :action GotoBookmark0<CR>
