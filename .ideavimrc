@@ -10,6 +10,8 @@ set relativenumber
 set scrolloff=999
 set history=100000
 set clipboard=unnamed
+set multiple-cursors
+set surround
 
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
