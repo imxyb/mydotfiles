@@ -12,6 +12,7 @@ set history=100000
 set clipboard=unnamed
 set surround
 set multiple-cursors
+set keep-english-in-normal
 
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
@@ -126,7 +127,7 @@ nnoremap <Leader>tc :action CloseActiveTab<CR>
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-nmap f :action emacsIDEAs.AceJumpWord<CR> 
+nmap <Leader><Leader>f :action KJumpAction<CR> 
 #nmap <Leader><Leader> :action AceLineAction<CR> 
 #nmap <Leader>at :action AceTargetAction<CR>
 
@@ -144,3 +145,4 @@ nmap <Leader>rn :action RenameElement<CR>
 nmap <Leader>ce :action RecentFiles<CR>
 nnoremap mm :action ToggleBookmark0<CR>
 nnoremap `m :action GotoBookmark0<CR>
+inoremap <C-CR> <esc>la
