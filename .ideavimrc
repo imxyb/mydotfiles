@@ -17,132 +17,99 @@ set keep-english-in-normal
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
 
-nnoremap <Leader>fs :w<CR>
-
-nnoremap <Leader>? :action GotoAction<CR>
+" quick get declaration
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
+nnoremap gp :action GotoSuperMethod<CR>
+
+" quick search every where
+nnoremap <Leader>ss :action SearchEverywhere<CR>
+
+" quick action
+nnormap <Leader>ga :action GoToAction<CR>
 
 " project search
-nnoremap <Leader>ps :action SearchEverywhere<CR>
-nnoremap <Leader>pf :action GotoFile<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap <Leader>gs :action GotoSymbol<CR>
+nnoremap <Leader>fp :action FindInPath<CR>
+nnoremap <Leader>ee :action RecentFiles<CR>
 
+" get usage
 nnoremap <Leader>fu :action FindUsages<CR>
-
-" Quit normal mode
-nnoremap <Leader>qq :q<CR>
-nnoremap <Leader>Q  :qa!<CR>
-
-" Move half page faster
-nnoremap <Leader>d  <C-d>
-nnoremap <Leader>u  <C-u>
-
-" Insert mode shortcut
-"inoremap <Leader>h <Left>
-"inoremap <Leader>j <Down>
-"inoremap <Leader>k <Up>
-"inoremap <Leader>l <Right>
-"inoremap <Leader>a <Home>
-"inoremap <Leader>e <End>
-"inoremap <Leader>d <Delete>
+nnoremap <Leader>su :action ShowUsages<CR>
 
 " Quit insert mode
 vnoremap v <Esc>
 
 " Move to the start of line
 nnoremap H ^
-
 " Move to the end of line
 nnoremap L $
 " Redo
 nnoremap U <C-r>
-
 " Yank to the end of line
 nnoremap Y y$
-
-" quit ==> close current window
-nnoremap <Leader>q <C-W>w
-
-" Window operation
-nnoremap <Leader>ww <C-W>w
-nnoremap <Leader>wd <C-W>c
-nnoremap <Leader>wj <C-W>j
-nnoremap <Leader>wk <C-W>k
-nnoremap <Leader>wh <C-W>h
-nnoremap <Leader>wl <C-W>l
-nnoremap <Leader>ws <C-W>s
-nnoremap <Leader>w- <C-W>s
-nnoremap <Leader>wv <C-W>v
-nnoremap <Leader>w\| <C-W>v
-
-" Tab operation
-nnoremap tn gt
-nnoremap tp gT
-
-" ==================================================
-" Show all the provided actions via `:actionlist`
-" ==================================================
 
 " built in search looks better
 nnoremap / :action Find<CR>
 " but preserve ideavim search
 nnoremap <Leader>/ /
 
+" comment
 nnoremap <Leader>;; :action CommentByLineComment<CR>
 
+" Debug
 nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 nnoremap <Leader>br :action ViewBreakpoints<CR>
 
+" view mode
 nnoremap <Leader>cv :action ChangeView<CR>
 
-nnoremap <Leader>cd :action ChooseDebugConfiguration<CR>
-
-nnoremap <Leader>ga :action GotoAction<CR>
-nnoremap <Leader>gc :action GotoClass<CR>
-nnoremap <Leader>gd :action GotoDeclaration<CR>
-nnoremap <Leader>gf :action GotoFile<CR>
-nnoremap <Leader>gi :action GotoImplementation<CR>
-nnoremap <Leader>gs :action GotoSymbol<CR>
-nnoremap <Leader>gt :action GotoTest<CR>
-
-nnoremap <Leader>fp :action ShowFilePath<CR>
-
+" inspect code
 nnoremap <Leader>ic :action InspectCode<CR>
 
-nnoremap <Leader>mv :action ActivateMavenProjectsToolWindow<CR>
+" optimize
+nnoremap == :action ReformatCode<CR>
+nnoremap -- :action OptimizeImports<CR>
 
-nnoremap <Leader>rc :action ReformatCode<CR>
-nnoremap <Leader>oi :action OptimizeImports<CR>
-
-nnoremap <Leader>pm :action ShowPopupMenu<CR>
-
-"nnoremap <Leader>rc :action ChooseRunConfiguration<CR>
+" rename
 nnoremap <Leader>re :action RenameElement<CR>
 nnoremap <Leader>rf :action RenameFile<CR>
 
-nnoremap <Leader>se :action SearchEverywhere<CR>
-nnoremap <Leader>su :action ShowUsages<CR>
-nnoremap <Leader>tc :action CloseActiveTab<CR>
+" jump
+nnoremap <Leader>kk :action KJumpAction<CR>
+nnoremap <Leader>kl :action KJumpAction.Line<CR>
 
-nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
-vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
-
-nmap <Leader><Leader>f :action KJumpAction<CR> 
-#nmap <Leader><Leader> :action AceLineAction<CR> 
-#nmap <Leader>at :action AceTargetAction<CR>
-
+" show error
 nmap <Leader>ed :action ShowErrorDescription<CR>
-nmap <Leader>en :action GotoNextError<CR>
-nmap <Leader>ep :action GotoPreviousError<CR>
 
-nmap <Leader>im :action GoImportsFileAction<CR>
-
+" disable in insert mode
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
-nmap <Leader>rn :action RenameElement<CR>
-nmap <Leader>ce :action RecentFiles<CR>
+
+" bookmark
 nnoremap mm :action ToggleBookmark0<CR>
 nnoremap `m :action GotoBookmark0<CR>
+
+" jump the quote such as '(' or '}'
 inoremap <C-CR> <esc>la
+
+" jump to last change
+nnoremap <Leader>lc :action JumpToLastChange<CR>
+
+" show intention actions
+nnoremap <Leader>sa :action ShowIntentionActions<CR>
+
+" next or prev method
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+" show history 
+nnoremap <Leader>sh :action LocalHistory.ShowHistory<CR>
+
+" Run 
+nnoremap <Leader>rr :action Run<CR>
+nnoremap <Leader>rc :action RunConfiguration<CR>
+
