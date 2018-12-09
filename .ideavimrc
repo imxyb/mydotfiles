@@ -12,7 +12,6 @@ set history=100000
 set clipboard=unnamed
 set surround
 set multiple-cursors
-set keep-english-in-normal
 
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
@@ -26,7 +25,7 @@ nnoremap gp :action GotoSuperMethod<CR>
 nnoremap <Leader>ss :action SearchEverywhere<CR>
 
 " quick action
-nnormap <Leader>ga :action GoToAction<CR>
+nnoremap <Leader>aa :action GotoAction<CR>
 
 " project search
 nnoremap <Leader>gf :action GotoFile<CR>
@@ -77,8 +76,8 @@ nnoremap <Leader>re :action RenameElement<CR>
 nnoremap <Leader>rf :action RenameFile<CR>
 
 " jump
-nnoremap <Leader>kk :action KJumpAction<CR>
-nnoremap <Leader>kl :action KJumpAction.Line<CR>
+nnoremap f :action KJumpAction<CR>
+nnoremap <Leader>kk :action KJumpAction.Line<CR>
 
 " show error
 nmap <Leader>ed :action ShowErrorDescription<CR>
@@ -113,3 +112,16 @@ nnoremap <Leader>sh :action LocalHistory.ShowHistory<CR>
 nnoremap <Leader>rr :action Run<CR>
 nnoremap <Leader>rc :action RunConfiguration<CR>
 
+" multi cursor
+map <C-N> <A-N>
+map <C-X> <A-X>
+map <C-P> <A-P>
+
+" CallHierarchy
+nnoremap <Leader>ch :action CallHierarchy<CR>
+
+" project window 
+nnoremap <Leader>ap :action ActivateProjectToolWindow<CR>
+
+" hide all windows
+nnoremap <Leader>hl :action HideAllWindows<CR>
