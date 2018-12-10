@@ -125,3 +125,7 @@ nnoremap <Leader>ap :action ActivateProjectToolWindow<CR>
 
 " hide all windows
 nnoremap <Leader>hl :action HideAllWindows<CR>
+
+" back and forward
+nnoremap <C-E> :action Back<CR>
+nnoremap <C-R> :action Forward<CR>
