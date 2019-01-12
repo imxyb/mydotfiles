@@ -76,11 +76,13 @@ nnoremap <Leader>re :action RenameElement<CR>
 nnoremap <Leader>rf :action RenameFile<CR>
 
 " jump
-nnoremap f :action KJumpAction<CR>
-nnoremap <Leader>kk :action KJumpAction.Line<CR>
+nnoremap F :action KJumpAction<CR>
+nnoremap f :action KJumpAction.Word1<CR>
 
 " show error
 nmap <Leader>ed :action ShowErrorDescription<CR>
+nmap <Leader>en :action GotoNextError<CR>
+nmap <Leader>ep :action GotoPreviousError<CR>
 
 " disable in insert mode
 noremap <Up> <Nop>
@@ -129,3 +131,19 @@ nnoremap <Leader>hl :action HideAllWindows<CR>
 " back and forward
 nnoremap <C-E> :action Back<CR>
 nnoremap <C-R> :action Forward<CR>
+
+" call struct window 
+nnoremap <Leader>as :action ActivateStructureToolWindow<CR>
+
+" show file path 
+nnoremap <Leader>sf :action ShowFilePath<CR>
+
+" delete or copy all method 
+nnoremap dm daBd2d
+nnoremap ym vaBVy 
+
+" quick ciw
+nnoremap cc ciw
+
+" quick ctrl + w
+nnoremap ` <C-W>
