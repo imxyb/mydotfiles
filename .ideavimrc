@@ -49,10 +49,8 @@ nnoremap U <C-r>
 " Yank to the end of line
 nnoremap Y y$
 
-" built in search looks better
-nnoremap / :action Find<CR>
-" but preserve ideavim search
-nnoremap <Leader>/ /
+" find 
+noremap / /
 
 " comment
 nnoremap <Leader>;; :action CommentByLineComment<CR>
@@ -129,3 +127,6 @@ nnoremap <Leader>hl :action HideAllWindows<CR>
 " back and forward
 nnoremap <C-E> :action Back<CR>
 nnoremap <C-R> :action Forward<CR>
+
+" show param
+imap <C-p> <ESC>:action ParameterInfo<CR>
