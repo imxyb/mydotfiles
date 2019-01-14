@@ -49,9 +49,6 @@ nnoremap U <C-r>
 " Yank to the end of line
 nnoremap Y y$
 
-" find 
-noremap / /
-
 " comment
 nnoremap <Leader>;; :action CommentByLineComment<CR>
 
