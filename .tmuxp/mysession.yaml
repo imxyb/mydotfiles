@@ -1,0 +1,30 @@
+session_name: mywork
+windows:
+- window_name: xsky-demon
+  layout: tiled
+  shell_command_before:
+    - cd /Users/xsky/go/src/xsky-demon
+  panes:
+    - echo pane1
+    - echo pane2
+- windows_name: xsky-vdi
+  layout: tiled 
+  panes:
+    - shell_command:
+      - ssh root@10.255.101.186
+    - shell_command: 
+      - ssh root@10.255.101.187
+    - shell_command:
+      - ssh root@10.255.101.188
+- windows_name: boa-test
+  layout: tiled 
+  panes:
+    - shell_command:
+      - sshpass -p Password@_ ssh root@10.0.11.239
+- windows_name: other
+  layout: tiled 
+  shell_command_before:
+    - cd /Users/xsky
+  panes: 
+    - null 
+    - null 

@@ -9,6 +9,7 @@ set number
 set relativenumber
 set scrolloff=999
 set history=100000
+set timeoutlen=10000000
 set clipboard=unnamed
 set surround
 set multiple-cursors
@@ -128,7 +129,7 @@ nnoremap <C-E> :action Back<CR>
 nnoremap <C-R> :action Forward<CR>
 
 " call struct window 
-nnoremap <Leader>as :action ActivateStructureToolWindow<CR>
+nnoremap <C-2> :action ActivateStructureToolWindow<CR>
 
 " show file path 
 nnoremap <Leader>sf :action ShowFilePath<CR>
@@ -145,3 +146,9 @@ nnoremap ` <C-W>
 
 " show param
 imap <C-p> <ESC>:action ParameterInfo<CR>
+
+" find
+nnoremap / :action Find<CR>
+
+" expression type
+nnoremap <Leader>er :action ExpressionTypeInfo<CR>
