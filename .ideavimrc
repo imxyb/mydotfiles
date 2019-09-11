@@ -94,7 +94,7 @@ nnoremap `m :action GotoBookmark0<CR>
 inoremap <C-CR> <esc>la
 
 " jump to last change
-nnoremap <Leader>lc :action JumpToLastChange<CR>
+nnoremap Y :action JumpToLastChange<CR>
 
 " show intention actions
 nnoremap <Leader>sa :action ShowIntentionActions<CR>
@@ -118,9 +118,6 @@ map <C-P> <A-P>
 " CallHierarchy
 nnoremap <Leader>ch :action CallHierarchy<CR>
 
-" project window 
-nnoremap <Leader>ap :action ActivateProjectToolWindow<CR>
-
 " hide all windows
 nnoremap <Leader>hl :action HideAllWindows<CR>
 
@@ -129,7 +126,6 @@ nnoremap <C-E> :action Back<CR>
 nnoremap <C-R> :action Forward<CR>
 
 " call struct window 
-nnoremap <C-2> :action ActivateStructureToolWindow<CR>
 
 " show file path 
 nnoremap <Leader>sf :action ShowFilePath<CR>
@@ -150,5 +146,15 @@ imap <C-p> <ESC>:action ParameterInfo<CR>
 " find
 nnoremap / :action Find<CR>
 
-" expression type
-nnoremap <Leader>er :action ExpressionTypeInfo<CR>
+" open or close window 
+nnoremap <Leader>tt :action ActivateTerminalToolWindow<CR>
+nnoremap <Leader>pp :action ActivateProjectToolWindow<CR>
+nnoremap <C-c> :action ActivateStructureToolWindow<CR>
+
+" quick declaction 
+nnoremap J :action QuickImplementations<CR>
+nnoremap K :action QuickJavaDoc<CR>
+
+" switch window 
+nnoremap <a-o> :action NextWindow<CR>
+nnoremap <a-p> :action PreviousWindow<CR>

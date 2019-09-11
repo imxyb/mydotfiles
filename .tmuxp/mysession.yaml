@@ -5,8 +5,8 @@ windows:
   shell_command_before:
     - cd /Users/xsky/go/src/xsky-demon
   panes:
-    - echo pane1
-    - echo pane2
+    - null
+    - null
 - windows_name: xsky-vdi
   layout: tiled 
   panes:
@@ -16,11 +16,15 @@ windows:
       - ssh root@10.255.101.187
     - shell_command:
       - ssh root@10.255.101.188
-- windows_name: boa-test
+- windows_name: xscaler
   layout: tiled 
   panes:
     - shell_command:
-      - sshpass -p Password@_ ssh root@10.0.11.239
+      - ssh root@10.252.90.220
+    - shell_command: 
+      - ssh root@10.252.90.221
+    - shell_command:
+      - ssh root@10.252.90.222
 - windows_name: other
   layout: tiled 
   shell_command_before:
