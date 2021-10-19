@@ -13,6 +13,15 @@ set timeoutlen=10000000
 set clipboard=unnamed
 set surround
 set multiple-cursors
+set keep-english-in-normal-and-restore-in-insert
+set argtextobj
+set commentary
+set textobj-entire
+set virtualedit=onemore
+set NERDTree
+
+set highlightedyank
+let g:highlightedyank_highlight_duration = "1000"
 
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
@@ -72,8 +81,8 @@ nnoremap <Leader>re :action RenameElement<CR>
 nnoremap <Leader>rf :action RenameFile<CR>
 
 " jump
-nnoremap F :action KJumpAction<CR>
-nnoremap f :action KJumpAction.Word1<CR>
+nnoremap f :action KJumpAction<CR>
+#nnoremap f :action KJumpAction.Word1<CR>
 
 " show error
 nmap <Leader>ed :action ShowErrorDescription<CR>
@@ -158,3 +167,6 @@ nnoremap K :action QuickJavaDoc<CR>
 " switch window 
 nnoremap <a-o> :action NextWindow<CR>
 nnoremap <a-p> :action PreviousWindow<CR>
+
+set clipboard+=unnamed
+set clipboard+=unnamedplus

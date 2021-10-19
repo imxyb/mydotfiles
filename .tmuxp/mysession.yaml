@@ -1,34 +1,31 @@
-session_name: mywork
+session_name: tencent
+before_script: "ssh -fN cdg.mnet2.com"
 windows:
-- window_name: xsky-demon
-  layout: tiled
-  shell_command_before:
-    - cd /Users/xsky/go/src/xsky-demon
-  panes:
-    - null
-    - null
-- windows_name: xsky-vdi
-  layout: tiled 
-  panes:
-    - shell_command:
-      - ssh root@10.255.101.186
-    - shell_command: 
-      - ssh root@10.255.101.187
-    - shell_command:
-      - ssh root@10.255.101.188
-- windows_name: xscaler
-  layout: tiled 
-  panes:
-    - shell_command:
-      - ssh root@10.252.90.220
-    - shell_command: 
-      - ssh root@10.252.90.221
-    - shell_command:
-      - ssh root@10.252.90.222
-- windows_name: other
-  layout: tiled 
-  shell_command_before:
-    - cd /Users/xsky
-  panes: 
-    - null 
-    - null 
+  - window_name: localhost
+    layout: tiled
+    panes:
+      - null
+      - null
+      - null
+      - null
+  - window_name: "预鉴权面板渲染-test"
+    layout: tiled
+    shell_command_before:
+      - ssh cdg.mnet2.com
+      - go -d test.pre_auth.hlw_render_plugin.gz100006 
+      - clear
+    panes:
+      - null
+      - null
+      - null
+      - null
+  - window_name: "devnet"
+    layout: tiled
+    shell_command_before:
+      - ssh -p 36000 -o StrictHostKeyChecking=no root@9.134.5.201  
+      - clear
+    panes:
+      - null
+      - null
+      - null
+      - null
